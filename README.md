@@ -15,5 +15,4 @@ yarn serve
 yarn build
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+为maker招聘写的网页，包括对maker的介绍，成员的介绍，所获得的成绩展示以及报名界面
