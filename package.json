@@ -1,0 +1,36 @@
+{
+  "name": "marker-iot",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build"
+  },
+  "dependencies": {
+    "axios": "^1.3.4",
+    "core-js": "^3.8.3",
+    "element-plus": "^2.2.28",
+    "express": "^4.18.2",
+    "lib-flexible": "^0.3.2",
+    "mockjs": "^1.1.0",
+    "qs": "^6.11.0",
+    "vue-axios": "^3.5.2",
+    "vue-router": "^4.0.3",
+    "vuex": "^4.0.0"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "~5.0.0",
+    "@vue/cli-plugin-router": "~5.0.0",
+    "@vue/cli-plugin-vuex": "~5.0.0",
+    "@vue/cli-service": "~5.0.0",
+    "amfe-flexible": "^2.2.1",
+    "autoprefixer": "^10.4.13",
+    "less": "^4.0.0",
+    "less-loader": "^8.0.0",
+    "postcss-pxtorem": "^6.0.0",
+    "px2rem-loader": "^0.1.9",
+    "style-resources-loader": "^1.4.1",
+    "vue": "^3.2.47",
+    "vue-cli-plugin-style-resources-loader": "~0.1.5"
+  }
+}

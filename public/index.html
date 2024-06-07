@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- 限制缩放 -->
+  <!-- <meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no"/> -->
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+  <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+  <title>Maker-IoT</title>
+  <meta name="keywords" content="智能家居、智能硬件控制、机器学习,Web/App开发,客户端、服务器、嵌入式、运营" />
+  <meta name="description" content="成立于 2016 年 4 月，隶属于计算机科学与工程学院微科创新创业基地，团队以物联网应用开发为主，参加各类学科竞赛为辅，积极学习各专业相关知识并加以运用。" />
+  <!-- 引入图标 -->
+  <!-- <link rel="stylesheet" href="//at.alicdn.com/t/font_3400366_by60xfp7swt.css"> -->
+</head>
+
+
+<body>
+  <noscript>
+    <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled.
+        Please enable it to continue.</strong>
+  </noscript>
+  <div id="app"></div>
+
+  <div id="log" style="display: none;">
+    <span>网页较大，请在电脑端打开哦...</span>
+  </div>
+  <!-- built files will be auto injected -->
+</body>
+<script type="text/javascript">
+  // 限制手机端访问界面
+  if ("ontouchstart" in document) {
+    document.getElementById("app").style.display = "none";
+    document.getElementById("log").style.display = "block";
+  }
+  // 控制允许用户放大或缩小页面
+  window.onload = function () {
+    document.addEventListener('touchstart', function (e) {
+      console.log("1", e.touches.length)
+      if (e.touches.length > 1) {
+        e.preventDefault()
+      }
+    })
+    document.addEventListener('gesturestart', function (e) {
+      console.log("2")
+      e.preventDefault()
+    })
+  }
+</script>
+
+<style>
+  #log {
+    display: relative;
+  }
+
+  #log span {
+    width: 12rem;
+    height: 7em;
+    text-align: center;
+    line-height: 6rem;
+    background-color: gray;
+    color: white;
+    font-size: .8rem;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -6rem;
+    margin-top: -3.5rem;
+    text-align: center;
+  }
+</style>
+
+</html>

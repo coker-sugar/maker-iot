@@ -1,0 +1,76 @@
+* {
+    padding: 0;
+    margin: 0;
+    /* 边框+内边距计入盒子宽高 */
+    box-sizing: border-box;
+}
+
+body {
+    font-family: '仿宋', '微软雅黑';
+    font-size: 14px;
+    /* 行高是字体大小的1.5倍 */
+    line-height: 1.5;    
+    font-weight: normal;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+/* 边框宽度为0 */
+/* 默认宽度为100%，父级宽度多少它宽度就多少 */
+div {
+    border-width: 0px;
+}
+
+a {
+    color: #333;
+    text-decoration: none;
+    outline: none;
+}
+
+li {
+    list-style: none;
+}
+
+/* 设置边框样式 */
+input {
+    outline: none;
+}
+
+/* 媒体查询 */
+@media (max-width: 768px) {
+    /* 在小屏幕下，调整全局样式 */
+    body {
+      font-size: 12px;
+    }
+  }
+
+
+.ellipsis {
+    /* 不换行 */
+    white-space: nowrap;
+    /* 超出显示省略号 */
+    text-overflow: ellipsis;
+    /* 超出内容隐藏 */
+    overflow: hidden;
+}
+
+/* 超过两行生省略号 */
+.ellipsis-2 {
+    /* 对于中日韩英等文本，可以实现任意字符换行 */
+    word-break: break-all;
+    text-overflow: ellipsis;
+    /* 隐藏超出部分的内容，用于清除浮动，裁剪文本 */
+    overflow: hidden;
+}
+
+
+/* 清除浮动 */
+.clearfix::after {
+    content: '';
+    display: block;
+    /* 隐藏元素但仍占据空间 */
+    visibility: hidden;
+    /* 在元素下方新建一行，并清除所有浮动元素的影响；*/ 
+    /* 常用于解决父元素因为子元素浮动而导致高度坍塌问题 */
+    clear: both;
+}
